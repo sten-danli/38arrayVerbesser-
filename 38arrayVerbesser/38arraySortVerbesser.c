@@ -5,7 +5,7 @@
 
 int main() {
 	int temp;
-	int arr[10] = { 1,23,89,4,28,7,260,99,6,48 };
+	int arr[10] = { 23,1,89,4,28,7,260,99,6,48 };
 
 	for (int i = 0; i < 10; i++)
 	{
@@ -14,7 +14,7 @@ int main() {
 		{
 			if (arr[idx] > arr[j])
 			{
-				idx = i;
+				idx = j;
 			}
 		}
 		if (idx != i)
@@ -22,8 +22,10 @@ int main() {
 			temp = arr[i];
 			arr[i] = arr[idx];
 			arr[idx] = temp;
+
 		}
+		printf("%d\n", arr[i]);
 	}
-		
+	
 }
 
